@@ -1,11 +1,12 @@
 package controller;
 
+import java.io.IOException;
 import java.util.List;
 
 public interface GeneralManager<T> {
-    List<T> showAll();
-    void add(T t);
-    void edit(int index,T t);
-    void delete(int index);
+    void showAll();
+    void add(T t) throws IOException;
+    void edit(int index,T t) throws IOException;
+    void delete(int index) throws IOException;
     void check(String code);
 }

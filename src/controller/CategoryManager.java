@@ -1,13 +1,15 @@
 package controller;
 
 import molder.Category;
+
 import java.util.List;
 
 public class CategoryManager implements GeneralManager<Category> {
     private List<Category> categoryList;
+
     @Override
-    public List<Category> showAll() {
-        return categoryList;
+    public void showAll() {
+
     }
 
     @Override
@@ -17,12 +19,12 @@ public class CategoryManager implements GeneralManager<Category> {
 
     @Override
     public void edit(int index, Category category) {
-categoryList.set(index,category);
+        categoryList.set(index, category);
     }
 
     @Override
     public void delete(int index) {
-categoryList.remove(index);
+        categoryList.remove(index);
     }
 
     @Override

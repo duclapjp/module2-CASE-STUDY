@@ -1,15 +1,26 @@
-package molder;
+package molder.product;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Product {
-    private String name;
-    private String codeProduct;
-    private String codeCategory;
-    private int quantity;
-    private Double price;
-    private LocalDate importDate;
-    private String description;
+public class Product implements Serializable {
+    String name;
+    String codeProduct;
+    String codeCategory;
+    int quantity;
+    double price;
+    LocalDate importDate;
+    String description;
+
+    public Product(String name, String codeProduct, String codeCategory, int quantity, double price, LocalDate importDate, String description) {
+        this.name = name;
+        this.codeProduct = codeProduct;
+        this.codeCategory = codeCategory;
+        this.quantity = quantity;
+        this.price = price;
+        this.importDate = importDate;
+        this.description = description;
+    }
 
     public Product() {
     }
@@ -46,11 +57,11 @@ public class Product {
         this.quantity = quantity;
     }
 
-    public Double getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(Double price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
